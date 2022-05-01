@@ -1,11 +1,24 @@
-import logo from "./logo.svg";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
 import "./App.css";
+import "./lib/font-awesome/css/all.min.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>We fight</h1>
-    </div>
+    <Router>
+      <Header>
+        <Routes>
+          <Route path="/" />
+        </Routes>
+        <Routes>
+          <Route path="/watched" />
+        </Routes>
+        <Routes>
+          <Route path="/add" />
+        </Routes>
+      </Header>
+    </Router>
   );
 }
 
